@@ -1,5 +1,7 @@
 <template>
-
+    <div>
+        CATEGORIAS
+    </div>
 </template>
 <script setup>
 //Props

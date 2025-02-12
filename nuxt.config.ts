@@ -1,4 +1,5 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+import { pt } from 'vuetify/locale'
 export default defineNuxtConfig({
     compatibilityDate: '2024-11-01',
 
@@ -19,14 +20,69 @@ export default defineNuxtConfig({
     vuetify: {
         vuetifyOptions: {
             labComponents: true,
+            defaults: {
+                VTextField: {
+                    variant: 'outlined',
+                    bgColor: '#fdfdfd',
+                    rounded: 'lg'
+                },
+                VTextarea: {
+                    variant: 'outlined',
+                    bgColor: '#fdfdfd',
+                    rounded: 'lg'
+                },
+                VSelect: {
+                    variant: 'outlined',
+                    bgColor: '#fdfdfd',
+                    rounded: 'lg'
+                },
+                VAutocomplete: {
+                    variant: 'outlined',
+                    bgColor: '#fdfdfd',
+                    rounded: 'lg'
+                },
+                VCard: {
+                    rounded: 'lg',
+                },
+                VBtn: {
+                    rounded: 'lg',
+                },
+                vListItem: {
+                    rounded: 'xl'
+                },
+                vList: {
+                    rounded: 'lg'
+                },
+                VDateInput: {
+                    variant: 'outlined',
+                    bgColor: '#fdfdfd',
+                    rounded: 'lg',
+                    prependIcon: '',
+                    prependInnerIcon: 'mdi-calendar'
+                },
+                VMenu: {
+                    contentClass: 'rounded-lg mt-2'
+                }
+            },
+            locale: {
+                locale: 'pt',
+                messages: { pt }
+            }
         },
         moduleOptions: {
 
         }
     },
 
-    routeRules: {
-        '/': { redirect: { to: '/admin/dashboard'} },
+    supabase: {
+        redirectOptions: {
+            login: '/auth/login',
+            callback: '/auth/confirmation',
+            exclude: [
+                '/',
+                '/^\/index/', // usando regex para pegar variações
+            ],
+        },
     },
 
     runtimeConfig: {
@@ -39,9 +95,9 @@ export default defineNuxtConfig({
     },
 
     googleFonts: {
-        base64: true,
-        fontsDir: 'assets/fonts',
-        overwriting: true,
+        // base64: true,
+        // fontsDir: 'assets/fonts',
+        // overwriting: true,
         families: {
             Inter: true,
         },

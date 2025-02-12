@@ -1,5 +1,7 @@
 <template>
-
+    <div>
+        CARTOES DE CREDITO
+    </div>
 </template>
 <script setup>
 //Props

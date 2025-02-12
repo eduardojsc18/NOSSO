@@ -1,5 +1,7 @@
 <template>
-
+    <div>
+        LANÇAMENTOS
+    </div>
 </template>
 <script setup>
 //Props

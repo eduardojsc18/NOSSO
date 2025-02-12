@@ -1,5 +1,7 @@
 <template>
-
+    <div>
+        BANCOS
+    </div>
 </template>
 <script setup>
 //Props

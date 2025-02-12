@@ -1,5 +1,3 @@
-import {useCookie} from "#app";
-
 export function useHelpers() {
 
     const toBRL = (value) => {
