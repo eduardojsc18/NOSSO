@@ -16,17 +16,9 @@
     </div>
 </template>
 <script setup>
-
 definePageMeta({
     layout: 'landing-page'
 })
-
-
-
-if(code){
-    router.push('/auth/confirmation')
-}
-
 </script>
 <style scoped>
 
