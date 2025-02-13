@@ -3,7 +3,6 @@ import {computed} from "vue";
 export function useSession() {
 
     const user = useSupabaseUser()
-    const session = useSupabaseSession()
     const supabase = useSupabaseClient()
     const config = useRuntimeConfig()
 
@@ -25,7 +24,6 @@ export function useSession() {
 
     return {
         user,
-        session,
         signInWithGithub,
         signOut,
         isLogged
