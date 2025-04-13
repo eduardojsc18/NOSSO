@@ -26,5 +26,8 @@
   },
   "devDependencies": {
     "supabase": "^2.9.6"
+  },
+  "overrides": {
+    "vue": "latest"
   }
 }
